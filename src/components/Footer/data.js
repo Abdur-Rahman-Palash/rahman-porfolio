@@ -14,32 +14,47 @@ export const QUICK_LINKS = [
 
 export const SOCIAL_LINKS = [
   {
+    name: 'WhatsApp',
+    icon: '💬',
+    url: 'https://wa.me/880786433078?text=Hello%20Abdur%20Rahman%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you',
+    color: 'cyan',
+    ariaLabel: 'Contact me on WhatsApp',
+  },
+  {
+    name: 'Email',
+    icon: '✉️',
+    url: 'mailto:abdurrahmanpalashbd@gmail.com?subject=Project%20Inquiry',
+    color: 'blue',
+    ariaLabel: 'Send me an email',
+  },
+  {
     name: 'GitHub',
     icon: '🐙',
-    url: 'https://github.com',
-    color: 'cyan',
+    url: 'https://github.com/Abdur-Rahman-Palash',
+    color: 'purple',
     ariaLabel: 'Visit my GitHub profile',
   },
   {
     name: 'LinkedIn',
     icon: '💼',
-    url: 'https://linkedin.com',
-    color: 'blue',
+    url: 'https://www.linkedin.com/in/abdur-rahman-palash-019b96251/',
+    color: 'cyan',
     ariaLabel: 'Connect on LinkedIn',
   },
   {
-    name: 'Twitter',
-    icon: '𝕏',
-    url: 'https://twitter.com',
-    color: 'purple',
-    ariaLabel: 'Follow on Twitter/Threads',
+    name: 'Facebook',
+    icon: '👥',
+    url: 'https://www.facebook.com/ccabdurrahman',
+    color: 'blue',
+    ariaLabel: 'Follow on Facebook',
   },
 ]
 
 export const CONTACT_INFO = {
-  email: 'contact@example.com',
-  phone: '+1 (555) 123-4567',
-  location: 'Bangladesh',
+  email: 'abdurrahmanpalashbd@gmail.com',
+  phone: '+880786433078',
+  location: 'Dadul, Attpukurhat, Kazihal, Fulbari-5260, Dinajpur, Bangladesh',
+  whatsapp: '+880786433078',
 }
 
 export const FOOTER_CONFIG = {

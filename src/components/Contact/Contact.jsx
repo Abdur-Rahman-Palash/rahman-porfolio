@@ -59,25 +59,39 @@ const slideInRight = {
 // Social Icons Data
 const SOCIAL_ICONS = [
   {
+    name: 'WhatsApp',
+    icon: '💬',
+    url: 'https://wa.me/880786433078?text=Hello%20Abdur%20Rahman%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you',
+    description: 'Message on WhatsApp',
+    color: 'cyan',
+  },
+  {
+    name: 'Email',
+    icon: '✉️',
+    url: 'mailto:abdurrahmanpalashbd@gmail.com?subject=Project%20Inquiry',
+    description: 'Send an email',
+    color: 'blue',
+  },
+  {
     name: 'GitHub',
     icon: '🐙',
-    url: 'https://github.com',
+    url: 'https://github.com/Abdur-Rahman-Palash',
     description: 'View my projects',
-    color: 'cyan',
+    color: 'purple',
   },
   {
     name: 'LinkedIn',
     icon: '💼',
-    url: 'https://linkedin.com',
+    url: 'https://www.linkedin.com/in/abdur-rahman-palash-019b96251/',
     description: 'Connect professionally',
-    color: 'blue',
+    color: 'cyan',
   },
   {
     name: 'Facebook',
     icon: '👥',
-    url: 'https://facebook.com',
-    description: 'Follow on social',
-    color: 'purple',
+    url: 'https://www.facebook.com/ccabdurrahman',
+    description: 'Follow on Facebook',
+    color: 'blue',
   },
 ]
 
@@ -391,6 +405,10 @@ function ContactForm() {
 
 // QR Code Card Component
 function QRCodeCard() {
+  const handleWhatsAppMessage = () => {
+    window.open('https://wa.me/880786433078?text=Hello%20Abdur%20Rahman%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you', '_blank')
+  }
+
   return (
     <motion.div
       className="relative w-full max-w-xs mx-auto md:mx-0"
@@ -407,12 +425,21 @@ function QRCodeCard() {
 
         {/* QR Code Placeholder */}
         <div className="relative z-10 flex flex-col items-center gap-4">
-          <div className="w-32 h-32 bg-gradient-to-br from-slate-700 to-slate-800 rounded border-2 border-purple-400/50 flex items-center justify-center">
+          <div className="w-32 h-32 bg-gradient-to-br from-slate-700 to-slate-800 rounded border-2 border-purple-400/50 flex items-center justify-center cursor-pointer hover:border-purple-400 transition-all duration-300" onClick={handleWhatsAppMessage}>
             <span className="text-6xl">📱</span>
           </div>
           <div className="text-center">
             <p className="text-sm font-bold text-purple-400 mb-1">Connect With Me</p>
             <p className="text-xs text-gray-400">Scan to view social profiles</p>
+            <p className="text-xs text-gray-400 mt-2">or send message via WhatsApp</p>
+            <motion.button
+              onClick={handleWhatsAppMessage}
+              className="mt-3 px-4 py-2 rounded border border-purple-400 text-purple-400 text-xs font-bold hover:bg-purple-400/10 transition-all"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              💬 Send Message
+            </motion.button>
           </div>
         </div>
       </div>
@@ -522,18 +549,28 @@ export default function Contact() {
 
                 {/* Contact Info Text */}
                 <motion.div
-                  className="hidden md:block p-6 rounded-lg border border-cyan-400/30 bg-cyan-900/10 backdrop-blur-md"
+                  className="hidden md:block p-6 rounded-lg border border-cyan-400/30 bg-cyan-900/10 backdrop-blur-md space-y-3"
                   variants={itemVariants}
                 >
                   <p className="text-sm text-gray-300 leading-relaxed">
-                    📧 <span className="text-cyan-400 font-bold">Email:</span> contact@example.com
+                    📧 <span className="text-cyan-400 font-bold">Email:</span> <br/> <span className="text-xs">abdurrahmanpalashbd@gmail.com</span>
                   </p>
-                  <p className="text-sm text-gray-300 leading-relaxed mt-2">
-                    📱 <span className="text-cyan-400 font-bold">Phone:</span> +1 (555) 123-4567
+                  <p className="text-sm text-gray-300 leading-relaxed">
+                    📱 <span className="text-cyan-400 font-bold">WhatsApp:</span> <br/> <span className="text-xs">+880786433078</span>
                   </p>
-                  <p className="text-sm text-gray-300 leading-relaxed mt-2">
-                    📍 <span className="text-cyan-400 font-bold">Location:</span> Bangladesh
+                  <p className="text-sm text-gray-300 leading-relaxed">
+                    📍 <span className="text-cyan-400 font-bold">Location:</span> <br/> <span className="text-xs">Dadul, Attpukurhat, Kazihal, Fulbari-5260, Dinajpur, Bangladesh</span>
                   </p>
+                  <motion.a
+                    href="https://wa.me/880786433078?text=Hello%20Abdur%20Rahman%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 px-4 py-2 rounded border border-cyan-400 text-cyan-400 text-xs font-bold hover:bg-cyan-400/10 transition-all"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    💬 Send Message on WhatsApp
+                  </motion.a>
                 </motion.div>
               </div>
             </motion.div>

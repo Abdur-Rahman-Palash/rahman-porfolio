@@ -424,8 +424,10 @@ export default function Footer() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <motion.a
-                  href="#contact"
-                  className="px-8 py-4 rounded-lg font-bold text-lg border-2 border-cyan-400 text-cyan-400 bg-cyan-400/5 hover:bg-cyan-400/20 transition-all duration-300 text-center neon-button"
+                  href="https://wa.me/880786433078?text=Hello%20Abdur%20Rahman%2C%20I%20would%20like%20to%20start%20a%20project%20with%20you"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 rounded-lg font-bold text-lg border-2 border-cyan-400 text-cyan-400 bg-cyan-400/5 hover:bg-cyan-400/20 transition-all duration-300 text-center neon-button inline-block"
                   whileHover={{
                     scale: 1.05,
                     boxShadow: '0 0 30px rgba(0, 255, 255, 0.6)',
@@ -435,8 +437,8 @@ export default function Footer() {
                   💬 Start a Project
                 </motion.a>
                 <motion.a
-                  href="mailto:contact@example.com"
-                  className="px-8 py-4 rounded-lg font-bold text-lg border-2 border-purple-400 text-purple-400 bg-purple-400/5 hover:bg-purple-400/20 transition-all duration-300 text-center neon-button"
+                  href="mailto:abdurrahmanpalashbd@gmail.com?subject=I%20would%20like%20to%20hire%20you"
+                  className="px-8 py-4 rounded-lg font-bold text-lg border-2 border-purple-400 text-purple-400 bg-purple-400/5 hover:bg-purple-400/20 transition-all duration-300 text-center neon-button inline-block"
                   whileHover={{
                     scale: 1.05,
                     boxShadow: '0 0 30px rgba(168, 85, 247, 0.6)',

@@ -311,8 +311,11 @@ export default function Hero() {
             variants={itemVariants}
           >
             {/* Hire Me Button */}
-            <motion.button
-              className="px-8 py-3 md:px-10 md:py-4 rounded-lg font-bold text-lg border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-button"
+            <motion.a
+              href="https://wa.me/880786433078?text=Hello%20Abdur%20Rahman%2C%20I%20would%20like%20to%20discuss%20a%20project%20or%20hire%20you"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 md:px-10 md:py-4 rounded-lg font-bold text-lg border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-button inline-block text-center"
               whileHover={{
                 scale: 1.05,
                 boxShadow: '0 0 30px rgba(0, 255, 255, 0.8)',
@@ -320,11 +323,13 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
             >
               💼 Hire Me
-            </motion.button>
+            </motion.a>
 
             {/* Download CV Button */}
-            <motion.button
-              className="px-8 py-3 md:px-10 md:py-4 rounded-lg font-bold text-lg border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black transition-all duration-300 neon-button"
+            <motion.a
+              href="/cv.json"
+              download="Abdur_Rahman_CV.json"
+              className="px-8 py-3 md:px-10 md:py-4 rounded-lg font-bold text-lg border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black transition-all duration-300 neon-button inline-block text-center"
               whileHover={{
                 scale: 1.05,
                 boxShadow: '0 0 30px rgba(168, 85, 247, 0.8)',
@@ -332,7 +337,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
             >
               📄 Download CV
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Social Icons */}
