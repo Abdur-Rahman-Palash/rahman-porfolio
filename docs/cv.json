@@ -1,47 +1,83 @@
 {
-  "name": "Abdur Rahman Palash",
-  "title": "Frontend React Developer",
-  "email": "abdurrahmanpalashbd@gmail.com",
-  "phone": "+880786433078",
-  "whatsapp": "+880786433078",
-  "address": "Dadul, Attpukurhat, Kazihal, Fulbari-5260, Dinajpur, Bangladesh",
-  "github": "https://github.com/Abdur-Rahman-Palash",
-  "linkedin": "https://www.linkedin.com/in/abdur-rahman-palash-019b96251/",
-  "facebook": "https://www.facebook.com/ccabdurrahman",
-  "summary": "Passionate Frontend React Developer specializing in React, Tailwind CSS, and modern JavaScript. Dedicated to building beautiful, performant, and accessible web applications.",
+  "basics": {
+    "name": "Abdur Rahman Palash",
+    "label": "Frontend React Developer",
+    "email": "abdurrahmanpalashbd@gmail.com",
+    "phone": "+880786433078",
+    "whatsapp": "+880786433078",
+    "location": {
+      "address": "Dadul, Attpukurhat, Kazihal, Fulbari-5260, Dinajpur",
+      "country": "Bangladesh"
+    },
+    "profiles": [
+      { "network": "GitHub", "url": "https://github.com/Abdur-Rahman-Palash" },
+      { "network": "LinkedIn", "url": "https://www.linkedin.com/in/abdur-rahman-palash-019b96251/" },
+      { "network": "Facebook", "url": "https://www.facebook.com/ccabdurrahman" },
+      { "network": "WhatsApp", "url": "https://wa.me/880786433078" }
+    ]
+  },
+  "summary": "Passionate Frontend React Developer with 3+ years building responsive, accessible web applications using React, Tailwind CSS and modern JavaScript. Strong focus on performance, UX and maintainable code.",
   "skills": [
     "React",
-    "JavaScript",
+    "JavaScript (ES6+)",
     "HTML5",
     "CSS3",
     "Tailwind CSS",
     "Framer Motion",
     "Vite",
     "Git",
-    "SEO Optimization",
-    "Responsive Design"
+    "Responsive Design",
+    "Web Performance",
+    "SEO Basics"
   ],
   "experience": [
     {
-      "role": "Frontend React Developer",
       "company": "Freelance",
-      "duration": "2023 - Present",
-      "description": "Developing responsive web applications using React, Tailwind CSS, and modern JavaScript. Building interactive user interfaces with a focus on performance and user experience."
+      "position": "Frontend React Developer",
+      "startDate": "2023",
+      "endDate": "Present",
+      "summary": "Delivering responsive React applications and interactive UI components; collaborating with clients to define requirements and shipping production-ready sites.",
+      "highlights": [
+        "Built Cyber Neon Portfolio using React, Vite, Tailwind CSS and Framer Motion",
+        "Implemented responsive designs and accessibility improvements",
+        "Integrated contact flows (email & WhatsApp) and optimized performance"
+      ]
     }
   ],
   "projects": [
     {
       "name": "Cyber Neon Portfolio",
-      "description": "Modern, animated portfolio website with cyberpunk aesthetic built with React, Vite, and Tailwind CSS.",
-      "technologies": ["React", "Vite", "Tailwind CSS", "Framer Motion"]
+      "description": "Personal portfolio showcasing projects and skills built with React, Vite and Tailwind CSS.",
+      "technologies": ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+      "live": "",
+      "source": "https://github.com/Abdur-Rahman-Palash"
+    },
+    {
+      "name": "E-Commerce Platform (sample)",
+      "description": "Full-stack e-commerce sample demonstrating product catalog and checkout flows.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+      "live": "",
+      "source": "https://github.com"
+    },
+    {
+      "name": "Task Management App (sample)",
+      "description": "Collaborative task management app with real-time features.",
+      "technologies": ["React", "Firebase", "Redux"],
+      "live": "",
+      "source": "https://github.com"
     }
   ],
   "education": [
     {
-      "institution": "Self-Taught Developer",
-      "field": "Web Development",
-      "year": "2022 - Present",
-      "details": "Continuous learning in Frontend Development, React, and Modern JavaScript."
+      "institution": "Self-Taught",
+      "area": "Web Development",
+      "startDate": "2022",
+      "endDate": "Present",
+      "notes": "Continuous learning in frontend technologies, modern JS and UI design"
     }
-  ]
+  ],
+  "extras": {
+    "languages": ["Bengali (native)", "English (conversational)"],
+    "availableForHire": true
+  }
 }

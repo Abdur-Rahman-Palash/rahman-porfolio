@@ -144,19 +144,19 @@ function SocialIcons() {
     {
       name: 'GitHub',
       icon: 'github',
-      url: 'https://github.com',
+      url: 'https://github.com/Abdur-Rahman-Palash',
       color: 'hover:text-cyan-400 hover:shadow-cyan',
     },
     {
       name: 'LinkedIn',
       icon: 'linkedin',
-      url: 'https://linkedin.com',
+      url: 'https://www.linkedin.com/in/abdur-rahman-palash-019b96251/',
       color: 'hover:text-blue-400 hover:shadow-blue',
     },
     {
       name: 'Facebook',
       icon: 'facebook',
-      url: 'https://facebook.com',
+      url: 'https://www.facebook.com/ccabdurrahman',
       color: 'hover:text-blue-300 hover:shadow-blue',
     },
   ]
