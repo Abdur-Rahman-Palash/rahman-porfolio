@@ -95,7 +95,7 @@ function PersonalDetails() {
   const details = [
     { label: 'Name', value: 'Abdur Rahman', icon: '👤' },
     { label: 'Location', value: 'Bangladesh', icon: '📍' },
-    { label: 'Email', value: 'your@email.com', icon: '✉️' },
+    { label: 'Email', value: 'abdurrahmanpalashbd@gmail.com', icon: '✉️' },
     { label: 'Experience', value: '3+ Years', icon: '⏱️' },
   ]
 
