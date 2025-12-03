@@ -376,7 +376,8 @@ function ContactForm() {
       {/* Submit Button */}
       <motion.button
         type="submit"
-        className="w-full px-8 py-3 md:py-4 rounded-lg border-2 border-cyan-400 text-cyan-400 font-bold text-lg hover:bg-cyan-400/10 transition-all duration-300 neon-button contact-submit"
+        className="w-full px-8 py-3 md:py-4 rounded-lg border-2 border-cyan-400 text-cyan-400 font-bold text-lg hover:bg-cyan-400/10 transition-all duration-300 neon-button contact-submit cursor-pointer"
+        style={{ pointerEvents: 'auto' }}
         whileHover={{
           scale: 1.02,
           boxShadow: '0 0 30px rgba(0, 255, 255, 0.6)',
@@ -434,7 +435,8 @@ function QRCodeCard() {
             <p className="text-xs text-gray-400 mt-2">or send message via WhatsApp</p>
             <motion.button
               onClick={handleWhatsAppMessage}
-              className="mt-3 px-4 py-2 rounded border border-purple-400 text-purple-400 text-xs font-bold hover:bg-purple-400/10 transition-all"
+              className="mt-3 px-4 py-2 rounded border border-purple-400 text-purple-400 text-xs font-bold hover:bg-purple-400/10 transition-all cursor-pointer"
+              style={{ pointerEvents: 'auto' }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -565,7 +567,8 @@ export default function Contact() {
                     href="https://wa.me/880786433078?text=Hello%20Abdur%20Rahman%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-4 px-4 py-2 rounded border border-cyan-400 text-cyan-400 text-xs font-bold hover:bg-cyan-400/10 transition-all"
+                    className="inline-block mt-4 px-4 py-2 rounded border border-cyan-400 text-cyan-400 text-xs font-bold hover:bg-cyan-400/10 transition-all cursor-pointer"
+                    style={{ pointerEvents: 'auto' }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
