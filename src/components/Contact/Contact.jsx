@@ -404,6 +404,12 @@ function ContactForm() {
 
 // QR Code Card Component
 function QRCodeCard() {
+  // Opens WhatsApp chat with a prefilled message
+  const handleWhatsAppMessage = () => {
+    const message = `Hello Abdur Rahman, I would like to connect regarding a project.`
+    const url = `https://wa.me/880786433078?text=${encodeURIComponent(message)}`
+    window.open(url, '_blank')
+  }
   return (
     <motion.div
       className="relative w-full max-w-xs mx-auto md:mx-0"
