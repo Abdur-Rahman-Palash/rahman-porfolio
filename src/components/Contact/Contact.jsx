@@ -253,15 +253,13 @@ function ContactForm() {
       return
     }
 
-    // TODO: Integrate EmailJS or backend API
-    // Example EmailJS integration:
-    // emailjs.send('SERVICE_ID', 'TEMPLATE_ID', {
-    //   from_name: formData.name,
-    //   to_email: formData.email,
-    //   message: formData.message,
-    // }, 'PUBLIC_KEY')
+    // Send message via WhatsApp with form data
+    const whatsappMessage = `Hi Abdur Rahman,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage: ${formData.message}\n\nPlease get back to me soon!`
+    const whatsappURL = `https://wa.me/880786433078?text=${encodeURIComponent(whatsappMessage)}`
+    
+    window.open(whatsappURL, '_blank')
 
-    console.log('Form submitted:', formData)
+    console.log('Message sent via WhatsApp:', formData)
     setIsSubmitted(true)
     setFormData({ name: '', email: '', message: '' })
 
@@ -406,10 +404,6 @@ function ContactForm() {
 
 // QR Code Card Component
 function QRCodeCard() {
-  const handleWhatsAppMessage = () => {
-    window.open('https://wa.me/880786433078?text=Hello%20Abdur%20Rahman%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you', '_blank')
-  }
-
   return (
     <motion.div
       className="relative w-full max-w-xs mx-auto md:mx-0"
@@ -424,24 +418,18 @@ function QRCodeCard() {
           transition={{ duration: 2, repeat: Infinity }}
         />
 
-        {/* QR Code Placeholder */}
+        {/* QR Code Image */}
         <div className="relative z-10 flex flex-col items-center gap-4">
-          <div className="w-32 h-32 bg-gradient-to-br from-slate-700 to-slate-800 rounded border-2 border-purple-400/50 flex items-center justify-center cursor-pointer hover:border-purple-400 transition-all duration-300" onClick={handleWhatsAppMessage}>
-            <span className="text-6xl">📱</span>
+          <div className="w-40 h-40 bg-white rounded border-2 border-purple-400/50 flex items-center justify-center overflow-hidden hover:border-purple-400 transition-all duration-300">
+            <img 
+              src="https://i.ibb.co/wrKdzNHt/qrcode.png" 
+              alt="Scan to connect with me" 
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="text-center">
             <p className="text-sm font-bold text-purple-400 mb-1">Connect With Me</p>
             <p className="text-xs text-gray-400">Scan to view social profiles</p>
-            <p className="text-xs text-gray-400 mt-2">or send message via WhatsApp</p>
-            <motion.button
-              onClick={handleWhatsAppMessage}
-              className="mt-3 px-4 py-2 rounded border border-purple-400 text-purple-400 text-xs font-bold hover:bg-purple-400/10 transition-all cursor-pointer"
-              style={{ pointerEvents: 'auto' }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              💬 Send Message
-            </motion.button>
           </div>
         </div>
       </div>
@@ -563,17 +551,6 @@ export default function Contact() {
                   <p className="text-sm text-gray-300 leading-relaxed">
                     📍 <span className="text-cyan-400 font-bold">Location:</span> <br/> <span className="text-xs">Dadul, Attpukurhat, Kazihal, Fulbari-5260, Dinajpur, Bangladesh</span>
                   </p>
-                  <motion.a
-                    href="https://wa.me/880786433078?text=Hello%20Abdur%20Rahman%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mt-4 px-4 py-2 rounded border border-cyan-400 text-cyan-400 text-xs font-bold hover:bg-cyan-400/10 transition-all cursor-pointer"
-                    style={{ pointerEvents: 'auto' }}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    💬 Send Message on WhatsApp
-                  </motion.a>
                 </motion.div>
               </div>
             </motion.div>
