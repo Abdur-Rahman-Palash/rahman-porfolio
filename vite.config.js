@@ -1,12 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
+const isGitHubPages = process.env.DEPLOY_TARGET === 'github';
+const outDir = isGitHubPages ? 'docs' : 'dist';
+const base = isGitHubPages ? '/rahman-porfolio/' : '/';
+
 export default defineConfig({
   plugins: [react()],
-  base: '/rahman-porfolio/', // <-- crucial for Render subpath deployment
+  base,
   build: {
-    outDir: 'docs', // keep docs as output folder
-    emptyOutDir: true, // clears old build automatically
+    outDir,
+    emptyOutDir: true,
   },
 });

@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: rahman-portfolio
+    env: static
+    buildCommand: npm install && DEPLOY_TARGET=render npm run build
+    staticPublishPath: ./dist
+    routes:
+      - path: /*
+        destination: /index.html
+        match: miss
+    envVars:
+      - key: NODE_ENV
+        value: production

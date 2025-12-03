@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:github": "DEPLOY_TARGET=github vite build",
+    "build:render": "DEPLOY_TARGET=render vite build",
     "preview": "vite preview"
   },
   "dependencies": {
