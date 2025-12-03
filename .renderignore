@@ -1,0 +1,6 @@
+# Render.com should only use dist/ folder for static deployment
+# Ignore docs/ folder (which is for GitHub Pages)
+docs/
+.git/
+node_modules/
+scripts/
