@@ -3,7 +3,7 @@ services:
     name: rahman-portfolio
     env: static
     buildCommand: npm install && npm run build
-    staticPublishPath: ./dist
+    staticPublishPath: dist
     envVars:
       - key: DEPLOY_TARGET
         value: render
