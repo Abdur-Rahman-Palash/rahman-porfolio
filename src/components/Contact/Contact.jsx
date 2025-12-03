@@ -420,13 +420,14 @@ function QRCodeCard() {
 
         {/* QR Code Image */}
         <div className="relative z-10 flex flex-col items-center gap-4">
-          <div className="w-40 h-40 bg-white rounded border-2 border-purple-400/50 flex items-center justify-center overflow-hidden hover:border-purple-400 transition-all duration-300">
-            <img 
-              src="https://i.ibb.co/wrKdzNHt/qrcode.png" 
-              alt="Scan to connect with me" 
-              className="w-full h-full object-cover"
-            />
-          </div>
+            <div className="w-32 h-32 rounded overflow-hidden border-2 border-purple-400/50 flex items-center justify-center cursor-pointer hover:border-purple-400 transition-all duration-300" onClick={handleWhatsAppMessage}>
+              <img
+                src="https://i.ibb.co/wrKdzNHt/qrcode.png"
+                alt="Scan to connect - Abdur Rahman"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           <div className="text-center">
             <p className="text-sm font-bold text-purple-400 mb-1">Connect With Me</p>
             <p className="text-xs text-gray-400">Scan to view social profiles</p>
