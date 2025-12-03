@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider>
       <HelmetProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/rahman-porfolio">
           <App />
         </BrowserRouter>
       </HelmetProvider>

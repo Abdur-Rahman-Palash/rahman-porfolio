@@ -299,8 +299,11 @@ export default function About() {
                 className="mt-8"
                 variants={itemVariants}
               >
-                <motion.button
-                  className="px-8 py-3 md:px-10 md:py-4 rounded-lg font-bold text-lg border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-button about-pulse-button"
+                <motion.a
+                  href="/rahman-porfolio/cv.pdf"
+                  download="Abdur_Rahman_Palash_CV.pdf"
+                  className="px-8 py-3 md:px-10 md:py-4 rounded-lg font-bold text-lg border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-button about-pulse-button inline-block text-center cursor-pointer"
+                  style={{ pointerEvents: 'auto' }}
                   whileHover={{
                     scale: 1.05,
                     boxShadow: '0 0 30px rgba(0, 255, 255, 0.8)',
@@ -308,7 +311,7 @@ export default function About() {
                   whileTap={{ scale: 0.95 }}
                 >
                   📄 Download CV
-                </motion.button>
+                </motion.a>
               </motion.div>
             </motion.div>
           </motion.div>

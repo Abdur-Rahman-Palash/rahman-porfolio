@@ -328,8 +328,8 @@ export default function Hero() {
 
             {/* Download CV Button */}
             <motion.a
-              href="/cv.json"
-              download="Abdur_Rahman_CV.json"
+              href="/rahman-porfolio/cv.pdf"
+              download="Abdur_Rahman_Palash_CV.pdf"
               className="px-8 py-3 md:px-10 md:py-4 rounded-lg font-bold text-lg border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black transition-all duration-300 neon-button inline-block text-center cursor-pointer"
               style={{ pointerEvents: 'auto' }}
               whileHover={{

@@ -1,34 +1,38 @@
 {
-  "personal": {
-    "name": "Abdur Rahman Palash",
-    "title": "Frontend React Developer",
-    "email": "abdurrahmanpalashbd@gmail.com",
-    "phone": "+880786433078",
-    "location": "Dadul, Attpukurhat, Kazihal, Fulbari-5260, Dinajpur, Bangladesh",
-    "socials": {
-      "github": "https://github.com/Abdur-Rahman-Palash",
-      "linkedin": "https://www.linkedin.com/in/abdur-rahman-palash-019b96251/",
-      "facebook": "https://www.facebook.com/ccabdurrahman"
-    }
-  },
-  "summary": "Passionate Frontend React Developer specializing in building modern, responsive web applications with React, Tailwind CSS, and JavaScript. Dedicated to creating beautiful user experiences with focus on performance and accessibility.",
-  "skills": {
-    "frontend": ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Framer Motion"],
-    "tools": ["Vite", "Git", "VS Code", "GitHub", "npm"],
-    "other": ["SEO Optimization", "Responsive Design", "Web Performance", "Git Version Control"]
-  },
+  "name": "Abdur Rahman Palash",
+  "title": "Frontend React Developer",
+  "email": "abdurrahmanpalashbd@gmail.com",
+  "phone": "+880786433078",
+  "whatsapp": "+880786433078",
+  "address": "Dadul, Attpukurhat, Kazihal, Fulbari-5260, Dinajpur, Bangladesh",
+  "github": "https://github.com/Abdur-Rahman-Palash",
+  "linkedin": "https://www.linkedin.com/in/abdur-rahman-palash-019b96251/",
+  "facebook": "https://www.facebook.com/ccabdurrahman",
+  "summary": "Passionate Frontend React Developer specializing in React, Tailwind CSS, and modern JavaScript. Dedicated to building beautiful, performant, and accessible web applications.",
+  "skills": [
+    "React",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Vite",
+    "Git",
+    "SEO Optimization",
+    "Responsive Design"
+  ],
   "experience": [
     {
+      "role": "Frontend React Developer",
       "company": "Freelance",
-      "position": "Frontend React Developer",
       "duration": "2023 - Present",
-      "description": "Developing responsive web applications using React, Tailwind CSS, and modern JavaScript. Building interactive user interfaces with focus on performance and user experience."
+      "description": "Developing responsive web applications using React, Tailwind CSS, and modern JavaScript. Building interactive user interfaces with a focus on performance and user experience."
     }
   ],
   "projects": [
     {
       "name": "Cyber Neon Portfolio",
-      "description": "Modern, animated portfolio website with cyberpunk aesthetic built with React, Vite, and Tailwind CSS",
+      "description": "Modern, animated portfolio website with cyberpunk aesthetic built with React, Vite, and Tailwind CSS.",
       "technologies": ["React", "Vite", "Tailwind CSS", "Framer Motion"]
     }
   ],
@@ -37,7 +41,7 @@
       "institution": "Self-Taught Developer",
       "field": "Web Development",
       "year": "2022 - Present",
-      "details": "Continuous learning in Frontend Development, React, and Modern JavaScript"
+      "details": "Continuous learning in Frontend Development, React, and Modern JavaScript."
     }
   ]
 }
