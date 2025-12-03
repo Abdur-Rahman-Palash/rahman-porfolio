@@ -175,8 +175,23 @@ export default function Navbar() {
               {NAV_LINKS.map(renderNavLink)}
             </div>
 
-            {/* Right Controls: Theme Toggle + Mobile Menu */}
+            {/* Right Controls: Hire Button + Theme Toggle + Mobile Menu */}
             <div className="flex items-center gap-2 ml-auto">
+              {/* Hire Me Button (left of theme toggle) */}
+              <motion.a
+                href="https://wa.me/880786433078?text=Hello%20Abdur%20Rahman%2C%20I%20would%20like%20to%20discuss%20a%20project%20or%20hire%20you"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden sm:inline-flex px-3 py-2 rounded-md text-sm font-medium border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-colors duration-200 mr-2"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                style={{ pointerEvents: 'auto' }}
+                aria-label="Hire me via WhatsApp"
+                title="Hire me"
+              >
+                💼 Hire Me
+              </motion.a>
+
               {/* Theme Toggle Button */}
               <motion.button
                 onClick={toggleTheme}

@@ -158,16 +158,9 @@ export default function SkillRing({
           </defs>
         </svg>
 
-        {/* Center Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 z-10">
+        {/* Center Content (icon only — percentage number removed) */}
+        <div className="absolute inset-0 flex items-center justify-center z-10">
           <span className="text-2xl md:text-3xl filter drop-shadow-lg">{icon}</span>
-          <motion.span
-            className={`text-lg md:text-xl font-bold ${currentColor.light} font-mono`}
-            animate={isHovered ? { scale: 1.1 } : { scale: 1 }}
-            transition={{ duration: 0.3 }}
-          >
-            {percentage}%
-          </motion.span>
         </div>
 
         {/* Animated Border Pulse */}
