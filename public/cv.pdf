@@ -7,64 +7,89 @@ endobj
 << /Type /Pages /Kids [3 0 R] /Count 1 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 6 0 R >> >> /Contents 4 0 R >>
 endobj
 4 0 obj
 << /Length 5 0 R >>
 stream
 BT
-/F1 24 Tf
-70 800 Td
+/F1 18 Tf
+50 800 Td
 (Abdur Rahman Palash) Tj
-/F1 16 Tf
-70 770 Td
+/F1 12 Tf
+50 780 Td
 (Frontend React Developer) Tj
-70 740 Td
+50 760 Td
 (Email: abdurrahmanpalashbd@gmail.com) Tj
-70 720 Td
+50 744 Td
 (Phone: +880786433078) Tj
-70 700 Td
+50 728 Td
+(WhatsApp: +880786433078) Tj
+50 712 Td
 (Address: Dadul, Attpukurhat, Kazihal, Fulbari-5260, Dinajpur, Bangladesh) Tj
-70 680 Td
-(GitHub: https://github.com/Abdur-Rahman-Palash) Tj
-70 660 Td
-(LinkedIn: https://www.linkedin.com/in/abdur-rahman-palash-019b96251/) Tj
-70 640 Td
-(Facebook: https://www.facebook.com/ccabdurrahman) Tj
-70 610 Td
-(Summary: Passionate Frontend React Developer specializing in React, Tailwind CSS, and modern JavaScript. Dedicated to building beautiful, performant, and accessible web applications.) Tj
-70 580 Td
-(Skills: React, JavaScript, HTML5, CSS3, Tailwind CSS, Framer Motion, Vite, Git, SEO Optimization, Responsive Design) Tj
-70 550 Td
-(Experience: Frontend React Developer, Freelance, 2023 - Present) Tj
-70 530 Td
-(Projects: Cyber Neon Portfolio - Modern, animated portfolio website with cyberpunk aesthetic built with React, Vite, and Tailwind CSS.) Tj
-70 510 Td
-(Education: Self-Taught Developer, Web Development, 2022 - Present) Tj
+
+50 692 Td
+(---) Tj
+50 676 Td
+(Summary:) Tj
+50 660 Td
+(Passionate Frontend React Developer with 3+ years building responsive, accessible web applications using React, Tailwind CSS and modern JavaScript.) Tj
+50 640 Td
+(---) Tj
+50 624 Td
+(Skills:) Tj
+50 608 Td
+(React; JavaScript (ES6+); HTML5; CSS3; Tailwind CSS; Framer Motion; Vite; Git; Responsive Design; Web Performance) Tj
+50 588 Td
+(---) Tj
+50 572 Td
+(Experience:) Tj
+50 556 Td
+(Freelance — Frontend React Developer (2023 - Present)) Tj
+50 540 Td
+(• Built Cyber Neon Portfolio using React, Vite, Tailwind CSS and Framer Motion) Tj
+50 524 Td
+(• Implemented responsive designs and accessibility improvements) Tj
+50 508 Td
+(• Integrated contact workflows (email & WhatsApp) and optimized performance) Tj
+50 492 Td
+(---) Tj
+50 476 Td
+(Projects:) Tj
+50 460 Td
+(Cyber Neon Portfolio — Personal portfolio showcasing projects and skills) Tj
+50 444 Td
+(E-Commerce Platform (sample) — Full-stack e-commerce demo) Tj
+50 428 Td
+(Task Management App (sample) — Collaborative task app) Tj
+50 412 Td
+(---) Tj
+50 396 Td
+(Education:) Tj
+50 380 Td
+(Self-Taught — Web Development (2022 - Present)) Tj
+50 364 Td
+(Languages: Bengali (native), English (conversational)) Tj
 ET
 endstream
 endobj
 5 0 obj
-2462
+1224
 endobj
 6 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
-7 0 obj
-<< /ProcSet [/PDF /Text] /Font << /F1 6 0 R >> >>
-endobj
 xref
-0 8
+0 7
 0000000000 65535 f 
 0000000010 00000 n 
 0000000061 00000 n 
 0000000112 00000 n 
-0000000197 00000 n 
-0000000992 00000 n 
-0000001007 00000 n 
-0000001082 00000 n 
+0000001428 00000 n 
+0000002453 00000 n 
+0000002472 00000 n 
 trailer
-<< /Size 8 /Root 1 0 R >>
+<< /Size 7 /Root 1 0 R >>
 startxref
-1167
+2523
 %%EOF
