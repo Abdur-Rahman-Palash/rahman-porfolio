@@ -1,0 +1,349 @@
+/* Contact Section Neon Styles */
+
+/* Grid Background Animation */
+.contact-grid {
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(0, 255, 255, 0.05) 25%, rgba(0, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, 0.05) 75%, rgba(0, 255, 255, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(0, 255, 255, 0.05) 25%, rgba(0, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, 0.05) 75%, rgba(0, 255, 255, 0.05) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+  animation: gridShift 25s linear infinite;
+}
+
+@keyframes gridShift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Social Card Styles */
+.social-card {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.social-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(168, 85, 247, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* Contact Input Focus Effects */
+.contact-input {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.4) 0%,
+    rgba(30, 41, 59, 0.2) 100%
+  );
+  backdrop-filter: blur(10px);
+}
+
+.contact-input::placeholder {
+  color: rgba(107, 114, 128, 0.6);
+}
+
+.contact-input:focus {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.6) 0%,
+    rgba(30, 41, 59, 0.3) 100%
+  );
+}
+
+/* Contact Form Card */
+.contact-form-card {
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.4) 0%,
+    rgba(30, 41, 59, 0.2) 100%
+  );
+}
+
+.contact-form-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.3), rgba(168, 85, 247, 0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* QR Card Styles */
+.qr-card {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.qr-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(0, 255, 255, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Neon Button Styles */
+.neon-button {
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.neon-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.neon-button:hover::before {
+  left: 100%;
+}
+
+.neon-button:hover {
+  transform: translateY(-2px);
+  letter-spacing: 1px;
+}
+
+/* Underline Animation */
+.contact-underline {
+  transform-origin: center;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6),
+              0 0 20px rgba(168, 85, 247, 0.4);
+  animation: underlineGlow 2s ease-in-out infinite;
+}
+
+@keyframes underlineGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6),
+                0 0 20px rgba(168, 85, 247, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
+                0 0 40px rgba(168, 85, 247, 0.6);
+  }
+}
+
+/* Submit Button Pulse Animation */
+.contact-submit {
+  position: relative;
+  animation: submitPulse 2s ease-in-out infinite;
+}
+
+@keyframes submitPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+  }
+}
+
+/* Input Label Colors */
+input:focus ~ label,
+textarea:focus ~ label {
+  color: currentColor;
+}
+
+/* Glass Morphism Effect */
+.glass-morphism {
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-grid {
+    background-size: 30px 30px;
+  }
+
+  .social-card {
+    backdrop-filter: blur(15px);
+  }
+
+  .contact-form-card {
+    backdrop-filter: blur(15px);
+  }
+}
+
+/* Animation Performance Optimization */
+@media (prefers-reduced-motion: reduce) {
+  .contact-grid,
+  .social-card,
+  .contact-form-card,
+  .qr-card,
+  .neon-button,
+  .contact-underline,
+  .contact-submit {
+    animation: none !important;
+  }
+
+  .social-card,
+  .neon-button::before,
+  .contact-input {
+    transition: none !important;
+  }
+
+  .neon-button:hover {
+    transform: none;
+    letter-spacing: normal;
+  }
+
+  *[animate],
+  motion-div {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Dark Mode Optimization */
+@media (prefers-color-scheme: dark) {
+  .contact-grid {
+    opacity: 0.1;
+  }
+
+  .social-card {
+    background: rgba(15, 23, 42, 0.5);
+  }
+
+  .contact-form-card {
+    background: rgba(15, 23, 42, 0.5);
+  }
+
+  .contact-input {
+    background: rgba(15, 23, 42, 0.5);
+  }
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .social-card,
+  .contact-form-card,
+  .qr-card,
+  .contact-input {
+    background: rgba(15, 23, 42, 0.8);
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+  .social-card,
+  .contact-form-card,
+  .qr-card {
+    border-width: 2px;
+  }
+
+  .neon-button {
+    border-width: 2px;
+    font-weight: 700;
+  }
+
+  .contact-underline {
+    height: 2px;
+  }
+
+  .contact-input {
+    border-width: 2px;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .social-card {
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+  }
+
+  .neon-button {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  }
+
+  .social-card:active {
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.4);
+  }
+
+  .neon-button:active {
+    transform: scale(0.98);
+  }
+
+  .contact-input:active {
+    background: rgba(15, 23, 42, 0.6);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .contact-grid,
+  .contact-underline,
+  .contact-submit,
+  .neon-button::before {
+    animation: none !important;
+  }
+
+  .social-card,
+  .contact-form-card,
+  .qr-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    background: white;
+  }
+
+  .contact-input {
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Text Input Styling */
+input,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input::selection,
+textarea::selection {
+  background-color: rgba(0, 255, 255, 0.3);
+  color: inherit;
+}

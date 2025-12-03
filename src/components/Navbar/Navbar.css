@@ -1,0 +1,168 @@
+/**
+ * Navbar Additional Styles
+ * Optional CSS enhancements for the Navbar component
+ * Can be imported and used for advanced styling scenarios
+ */
+
+/* Smooth transitions for theme changes */
+.navbar-transition {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glass morphism effect for navbar on scroll */
+.navbar-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-blur.dark {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth underline animation for active links */
+@keyframes underlineSlide {
+  from {
+    width: 0;
+    left: 0;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.navbar-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-primary), transparent);
+  animation: underlineSlide 0.3s ease-out forwards;
+}
+
+/* Mobile menu animation */
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar-mobile-menu {
+  animation: slideInFromTop 0.3s ease-out forwards;
+}
+
+/* Hover effects for navbar items */
+.navbar-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(var(--color-primary-rgb), 0.1);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.navbar-item:hover::before {
+  left: 0;
+}
+
+/* Responsive spacing adjustments */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-link {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar-link {
+    font-size: 0.95rem;
+  }
+}
+
+/* Accessibility: Focus visible for keyboard navigation */
+.navbar-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 0.375rem;
+}
+
+/* Prevent text selection on navbar elements */
+.navbar-logo,
+.navbar-menu-toggle {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Theme toggle button specific styles */
+.theme-toggle-btn {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: rotate(20deg);
+}
+
+.theme-toggle-btn:active {
+  transform: rotate(20deg) scale(0.95);
+}
+
+/* Dark mode specific adjustments */
+@media (prefers-color-scheme: dark) {
+  .navbar-link:hover {
+    color: var(--color-primary-light);
+  }
+}
+
+/* Light mode specific adjustments */
+@media (prefers-color-scheme: light) {
+  .navbar-link:hover {
+    color: var(--color-primary-dark);
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .navbar-transition,
+  .navbar-link,
+  .navbar-mobile-menu,
+  .theme-toggle-btn {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  header[role='banner'] {
+    position: static;
+    background: white;
+  }
+
+  .navbar-mobile-menu {
+    display: none !important;
+  }
+}

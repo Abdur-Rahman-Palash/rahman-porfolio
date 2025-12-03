@@ -1,0 +1,237 @@
+/* About Section Neon Styles */
+
+/* Grid Background Animation */
+.about-grid {
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(0, 255, 255, 0.05) 25%, rgba(0, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, 0.05) 75%, rgba(0, 255, 255, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(0, 255, 255, 0.05) 25%, rgba(0, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, 0.05) 75%, rgba(0, 255, 255, 0.05) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+  animation: gridShift 20s linear infinite;
+}
+
+@keyframes gridShift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Neon Border Animation */
+.about-neon-border {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px currentColor, inset 0 0 5px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 20px currentColor, inset 0 0 10px currentColor;
+  }
+}
+
+/* Neon Card Hover */
+.neon-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.neon-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.neon-card:hover::before {
+  left: 100%;
+}
+
+/* Stat Card Neon */
+.neon-stat-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.1) 0%,
+    rgba(0, 255, 255, 0.05) 100%
+  );
+}
+
+.neon-stat-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent
+  );
+  animation: spin 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Underline Animation */
+.about-underline {
+  transform-origin: center;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6),
+              0 0 20px rgba(168, 85, 247, 0.4);
+  animation: underlineGlow 2s ease-in-out infinite;
+}
+
+@keyframes underlineGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6),
+                0 0 20px rgba(168, 85, 247, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
+                0 0 40px rgba(168, 85, 247, 0.6);
+  }
+}
+
+/* Pulse Button Animation */
+.about-pulse-button {
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  animation: buttonPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5),
+                inset 0 0 10px rgba(0, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8),
+                inset 0 0 15px rgba(0, 255, 255, 0.3);
+  }
+}
+
+/* Shine Effect on Neon Button */
+.neon-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.neon-button:hover::before {
+  left: 100%;
+}
+
+/* Text Gradient Animation */
+@keyframes textGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .about-grid,
+  .about-neon-border,
+  .about-underline,
+  .about-pulse-button,
+  .neon-stat-card::before {
+    animation: none !important;
+  }
+
+  .neon-card::before,
+  .neon-button::before {
+    animation: none !important;
+  }
+
+  .neon-card:hover::before,
+  .neon-button:hover::before {
+    left: auto;
+  }
+
+  *[animate] {
+    animation: none !important;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about-grid {
+    background-size: 30px 30px;
+  }
+
+  .neon-stat-card {
+    padding: 1.5rem !important;
+  }
+
+  .about-underline {
+    width: 3rem;
+  }
+}
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  .about-grid {
+    opacity: 0.1;
+  }
+
+  .neon-card {
+    background: linear-gradient(
+      to bottom right,
+      rgba(15, 23, 42, 0.5),
+      rgba(30, 41, 59, 0.3)
+    );
+  }
+}
+
+/* Fallback for browsers without animation support */
+@supports not (animation: test 1s) {
+  .about-neon-border {
+    box-shadow: 0 0 10px currentColor;
+  }
+
+  .about-underline {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  }
+
+  .about-pulse-button {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  }
+}

@@ -1,0 +1,264 @@
+/* Projects Section Neon Styles */
+
+/* Grid Background Animation */
+.projects-grid {
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(0, 255, 255, 0.05) 25%, rgba(0, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, 0.05) 75%, rgba(0, 255, 255, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(0, 255, 255, 0.05) 25%, rgba(0, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 255, 0.05) 75%, rgba(0, 255, 255, 0.05) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+  animation: gridShift 25s linear infinite;
+}
+
+@keyframes gridShift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+/* Project Card Glass Morphism */
+.project-card {
+  position: relative;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.4) 0%,
+    rgba(30, 41, 59, 0.2) 100%
+  );
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.3), rgba(168, 85, 247, 0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Neon Button Styles */
+.neon-button {
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.neon-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.neon-button:hover::before {
+  left: 100%;
+}
+
+.neon-button:hover {
+  transform: translateY(-2px);
+  letter-spacing: 1px;
+}
+
+/* Underline Animation */
+.projects-underline {
+  transform-origin: center;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6),
+              0 0 20px rgba(168, 85, 247, 0.4);
+  animation: underlineGlow 2s ease-in-out infinite;
+}
+
+@keyframes underlineGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6),
+                0 0 20px rgba(168, 85, 247, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8),
+                0 0 40px rgba(168, 85, 247, 0.6);
+  }
+}
+
+/* Glass Morphism Effect */
+.glass-morphism {
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-morphism:hover {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Image Hover Glow */
+.project-card img {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: brightness(1) contrast(1);
+}
+
+.project-card:hover img {
+  filter: brightness(1.1) contrast(1.1);
+  transform: scale(1.1);
+}
+
+/* Card Border Pulse Animation */
+@keyframes cardBorderPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 217, 255, 0.4);
+  }
+}
+
+/* Responsive Grid Background */
+@media (max-width: 768px) {
+  .projects-grid {
+    background-size: 30px 30px;
+  }
+
+  .project-card {
+    backdrop-filter: blur(15px);
+  }
+}
+
+/* Animation Performance Optimization */
+@media (prefers-reduced-motion: reduce) {
+  .projects-grid,
+  .project-card,
+  .neon-button,
+  .projects-underline {
+    animation: none !important;
+  }
+
+  .project-card img,
+  .neon-button::before {
+    transition: none !important;
+  }
+
+  .neon-button:hover {
+    transform: none;
+    letter-spacing: normal;
+  }
+
+  *[animate],
+  motion-div {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Dark Mode Optimization */
+@media (prefers-color-scheme: dark) {
+  .projects-grid {
+    opacity: 0.1;
+  }
+
+  .project-card {
+    background: linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.5) 0%,
+      rgba(30, 41, 59, 0.3) 100%
+    );
+  }
+
+  .glass-morphism {
+    background: rgba(15, 23, 42, 0.4);
+  }
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .project-card,
+  .glass-morphism {
+    background: rgba(15, 23, 42, 0.8);
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+  .project-card {
+    border-width: 2px;
+  }
+
+  .neon-button {
+    border-width: 2px;
+    font-weight: 700;
+  }
+
+  .projects-underline {
+    height: 2px;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .project-card {
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+  }
+
+  .neon-button {
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+  }
+
+  .project-card:active {
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.4);
+  }
+
+  .neon-button:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .projects-grid,
+  .projects-underline,
+  .neon-button::before {
+    animation: none !important;
+  }
+
+  .project-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  .glass-morphism {
+    background: white;
+    backdrop-filter: none;
+  }
+}
+
+/* 3D Transform Optimization */
+@media (prefers-reduced-motion: no-preference) {
+  .project-card {
+    perspective: 1000px;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Color Transition Smoothing */
+.neon-button {
+  --tw-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

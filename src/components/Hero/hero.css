@@ -1,0 +1,156 @@
+/**
+ * Cyber Neon Hero Section Styles
+ * Advanced CSS for neon effects, animations, and visual enhancements
+ */
+
+/* Neon Grid Background */
+.neon-grid {
+  background-image:
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 0 0;
+  animation: gridShift 20s linear infinite;
+}
+
+@keyframes gridShift {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 50px 50px, 50px 50px;
+  }
+}
+
+/* Neon Text Glow */
+.neon-text-glow {
+  text-shadow:
+    0 0 10px rgba(0, 255, 255, 0.8),
+    0 0 20px rgba(0, 255, 255, 0.6),
+    0 0 30px rgba(0, 255, 255, 0.4),
+    0 0 40px rgba(0, 255, 255, 0.2);
+  animation: textPulse 3s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 10px rgba(0, 255, 255, 0.8),
+      0 0 20px rgba(0, 255, 255, 0.6),
+      0 0 30px rgba(0, 255, 255, 0.4),
+      0 0 40px rgba(0, 255, 255, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 5px rgba(0, 255, 255, 0.4),
+      0 0 10px rgba(0, 255, 255, 0.3),
+      0 0 15px rgba(0, 255, 255, 0.2),
+      0 0 20px rgba(0, 255, 255, 0.1);
+  }
+}
+
+/* Neon Border */
+.neon-border {
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), inset 0 0 10px rgba(0, 255, 255, 0.1);
+  animation: borderGlow 2s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), inset 0 0 10px rgba(0, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), inset 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+}
+
+/* Neon Button */
+.neon-button {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+.neon-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.neon-button:hover::before {
+  left: 100%;
+}
+
+/* Neon Glow Effect */
+.neon-glow {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.neon-glow:hover {
+  filter: brightness(1.2) drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
+}
+
+/* Flicker Animation for Hologram Effect */
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0.8;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0.7;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hologram-flicker {
+  animation: flicker 5s infinite;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  .neon-grid {
+    background-size: 30px 30px;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .neon-grid,
+  .neon-text-glow,
+  .neon-border,
+  .neon-button::before {
+    animation: none !important;
+  }
+
+  .neon-button,
+  .neon-glow {
+    transition: none !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .neon-grid,
+  .neon-border {
+    display: none;
+  }
+
+  section {
+    min-height: auto;
+  }
+}
